@@ -8,6 +8,7 @@
       <!-- HTML -->
       <span class="eyebrow">@{{ event.time }} on {{ event.data }}</span>
       <h4>{{ event.title }}</h4>
+      <BaseIcon name="users" />
       <span>{{ event.attendees.length }} attending</span>
     </div>
   </router-link>
