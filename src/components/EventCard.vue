@@ -1,7 +1,7 @@
 <template>
   <router-link
     class="event-link"
-    :to="{ name: 'event-show', params: { id: '1' } }"
+    :to="{ name: 'event-show', params: { id: event.id } }"
   >
     <div class="event-card -shadow">
       <!-- Skelaton -->
@@ -18,19 +18,8 @@
 export default {
   // Brain
   // JS
-  data() {
-    return {
-      event: {
-        id: 1,
-        title: 'Beach Cleanup',
-        data: 'Tues Aug 19, 2018',
-        time: '6:00',
-        attendees: [
-          { id: 'abc123', name: 'Adam Jahr' },
-          { id: 'def456', name: 'Greeg Pollac' }
-        ]
-      }
-    }
+  props: {
+    event: Object
   }
 }
 </script>
