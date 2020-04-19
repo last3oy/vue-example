@@ -58,6 +58,24 @@
       "time": "",
       "attendees": [],
       "id": 8419989
+    },
+    {
+      "id": 5344778,
+      "user": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Planting tree",
+      "description": "We're going to plant trees",
+      "location": "forest",
+      "date": "2020-04-02T16:29:00.000Z",
+      "time": "2:00",
+      "attendees": []
     }
   ]
 }

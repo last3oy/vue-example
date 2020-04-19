@@ -74,12 +74,25 @@ export default {
   },
   methods: {
     createEvent() {
-      this.$store.dispatch('createEvent', this.event)
+      this.$store
+        .dispatch('createEvent', this.event)
+        .then(() => {
+          this.$router.push({
+            name: 'event-show',
+            params: { id: this.event.id }
+          })
+          this.event = this.createFreshEvent()
+        })
+        .catch(() => {
+          console.log('There was a problem creating your event')
+        })
     },
     createFreshEvent() {
       const user = this.$store.state.user
       const id = Math.floor(Math.random() * 10000000)
       return {
+        id: id,
+        user: user,
         category: '',
         organizer: user,
         title: '',
