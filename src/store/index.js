@@ -33,7 +33,13 @@ export default new Vuex.Store({
       state.count += value
     }
   },
-  actions: {},
+  actions: {
+    updateCount({ state, commit }, value) {
+      if (state.user) {
+        commit('INCREMENT_COUNT', value)
+      }
+    }
+  },
   modules: {},
   getters: {
     catLength: state => {
