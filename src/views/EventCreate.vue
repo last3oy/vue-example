@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an Event</h1>
-    <form @submit.prevent="createEvent">
+    <form @submit.prevent="createEventt">
       <label>Select a category</label>
       <select v-model="event.category">
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
@@ -56,6 +56,7 @@
 
 <script>
 import Datepicker from 'vuejs-datepicker'
+import { mapActions } from 'vuex'
 
 export default {
   components: {
@@ -73,9 +74,8 @@ export default {
     }
   },
   methods: {
-    createEvent() {
-      this.$store
-        .dispatch('event/createEvent', this.event)
+    createEventt() {
+      this.createEvent(this.event)
         .then(() => {
           this.$router.push({
             name: 'event-show',
@@ -102,7 +102,8 @@ export default {
         time: '',
         attendees: []
       }
-    }
+    },
+    ...mapActions('event', ['createEvent'])
   }
 }
 </script>

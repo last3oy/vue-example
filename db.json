@@ -98,6 +98,32 @@
       "date": "2020-01-08T18:30:00.000Z",
       "time": "4:00",
       "attendees": []
+    },
+    {
+      "id": 1855116,
+      "user": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "category": "nature",
+      "organizer": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "title": "fasfasfafasfsaf",
+      "description": "fasfasf",
+      "location": "fasfsafa",
+      "date": "2020-04-07T18:55:00.000Z",
+      "time": "23:00",
+      "attendees": []
+    },
+    {
+      "isTrusted": true,
+      "id": 8419990
     }
   ]
 }
