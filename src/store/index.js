@@ -28,7 +28,11 @@ export default new Vuex.Store({
       { id: 3, title: '...', organizer: '...' }
     ]
   },
-  mutations: {},
+  mutations: {
+    INCREMENT_COUNT(state, value) {
+      state.count += value
+    }
+  },
   actions: {},
   modules: {},
   getters: {
