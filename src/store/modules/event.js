@@ -1,5 +1,7 @@
 import EventService from '@/services/EventService.js'
 
+export const namespaced = true
+
 export const state = {
   events: [],
   eventsTotal: 0,
@@ -23,8 +25,8 @@ export const mutations = {
 
 export const actions = {
   createEvent({ commit, rootState }, event) {
-    // use rootState instead of state (local)
-    console.log('User creating Event is ' + rootState.user.user.name)
+    // use rootState instead of state (local).
+    console.log('Event Creating by ' + rootState.user.name)
 
     return EventService.postEvent(event).then(() => {
       commit('ADD_EVENT', event)
@@ -37,11 +39,11 @@ export const actions = {
         commit('SET_EVENTS', response.data)
       })
       .catch(error => {
-        console.log('There was an error:' + error.response)
+        console.log('There was an error:', error.response)
       })
   },
-  fetchEvent({ commit }, id) {
-    var event = this.getters.getEventById(id)
+  fetchEvent({ commit, getters }, id) {
+    var event = getters.getEventById(id)
 
     if (event) {
       commit('SET_EVENT', event)
@@ -51,24 +53,13 @@ export const actions = {
           commit('SET_EVENT', response.data)
         })
         .catch(error => {
-          console.log(error)
+          console.log('There was an error:', error.response)
         })
     }
   }
 }
+
 export const getters = {
-  catLength: state => {
-    return state.categories.length
-  },
-  doneTodos: state => {
-    return state.todos.filter(todo => todo.done)
-  },
-  // activeTodosCount: (state, getters) => {
-  //   return state.todos.length - getters.doneTodos.length
-  // }
-  activeTodosCount: state => {
-    return state.todos.filter(todo => !todo.done).length
-  },
   getEventById: state => id => {
     return state.events.find(event => event.id === id)
   }
