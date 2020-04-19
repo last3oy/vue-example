@@ -44,6 +44,20 @@
       "date": "2019-02-02T23:27:00.000Z",
       "time": "1:00",
       "attendees": []
+    },
+    {
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam Jahr"
+      },
+      "title": "Working?",
+      "description": "eiei",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": [],
+      "id": 8419989
     }
   ]
 }
