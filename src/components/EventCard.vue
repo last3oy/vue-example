@@ -6,7 +6,7 @@
     <div class="event-card -shadow">
       <!-- Skelaton -->
       <!-- HTML -->
-      <span class="eyebrow">@{{ event.time }} on {{ event.data }}</span>
+      <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
       <h4>{{ event.title }}</h4>
       <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
       <!-- <BaseIcon name="users"><p slot="eiei"></p></BaseIcon> -->
