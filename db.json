@@ -124,6 +124,108 @@
     {
       "isTrusted": true,
       "id": 8419990
+    },
+    {
+      "id": 8189734,
+      "user": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "category": "housing",
+      "organizer": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "title": "fasfasfasf",
+      "description": "fasfasfaf",
+      "location": "fasfasf",
+      "date": "2020-04-10T19:27:00.000Z",
+      "time": "5:00",
+      "attendees": []
+    },
+    {
+      "id": 9838850,
+      "user": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "category": "animal welfare",
+      "organizer": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "title": "fasfasfasf",
+      "description": "fasfasfa",
+      "location": "fafaf",
+      "date": "2020-04-02T19:28:00.000Z",
+      "time": "7:00",
+      "attendees": []
+    },
+    {
+      "id": 9612236,
+      "user": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "category": "nature",
+      "organizer": {
+        "user": {
+          "id": "123",
+          "name": "Adam"
+        }
+      },
+      "title": "fasfasfas",
+      "description": "fasfasfas",
+      "location": "fsafasf",
+      "date": "2020-04-02T19:29:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 3605919,
+      "user": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "title": "fsdfsdf",
+      "description": "fsdfsfs",
+      "location": "fsdfsf",
+      "date": "2020-04-09T19:31:00.000Z",
+      "time": "3:00",
+      "attendees": []
+    },
+    {
+      "id": 5959659,
+      "user": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "title": "dasdasd",
+      "description": "asdasd",
+      "location": "dasdasdasd",
+      "date": "2020-04-09T19:34:00.000Z",
+      "time": "21:00",
+      "attendees": []
     }
   ]
 }

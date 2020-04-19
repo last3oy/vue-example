@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Create an Event</h1>
-    <form @submit.prevent="createEventt">
+    <form @submit.prevent="createEvent">
       <label>Select a category</label>
       <select v-model="event.category">
         <option v-for="cat in categories" :key="cat">{{ cat }}</option>
@@ -37,6 +37,7 @@
       </div>
 
       <h3>When is your event?</h3>
+
       <div class="field">
         <label>Date</label>
         <datepicker v-model="event.date" placeholder="Select a date" />
@@ -56,8 +57,6 @@
 
 <script>
 import Datepicker from 'vuejs-datepicker'
-import { mapActions } from 'vuex'
-
 export default {
   components: {
     Datepicker
@@ -68,27 +67,26 @@ export default {
       times.push(i + ':00')
     }
     return {
-      event: this.createFreshEvent(),
       times,
-      categories: this.$store.state.categories
+      categories: this.$store.state.categories,
+      event: this.createFreshEventObject()
     }
   },
   methods: {
-    createEventt() {
-      this.createEvent(this.event)
+    createEvent() {
+      this.$store
+        .dispatch('event/createEvent', this.event)
         .then(() => {
           this.$router.push({
             name: 'event-show',
             params: { id: this.event.id }
           })
-          this.event = this.createFreshEvent()
+          this.event = this.createFreshEventObject()
         })
-        .catch(() => {
-          console.log('There was a problem creating your event')
-        })
+        .catch(() => {})
     },
-    createFreshEvent() {
-      const user = this.$store.state.user
+    createFreshEventObject() {
+      const user = this.$store.state.user.user
       const id = Math.floor(Math.random() * 10000000)
       return {
         id: id,
@@ -102,8 +100,7 @@ export default {
         time: '',
         attendees: []
       }
-    },
-    ...mapActions('event', ['createEvent'])
+    }
   }
 }
 </script>
