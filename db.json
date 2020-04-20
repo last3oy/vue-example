@@ -267,6 +267,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 962420,
+      "user": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "category": "",
+      "organizer": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "title": "",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }

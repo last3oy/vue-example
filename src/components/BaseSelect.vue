@@ -2,7 +2,12 @@
   <div>
     <label v-if="label">{{ label }}</label>
     <!-- select for object library https://vue-multiselect.js.org/ -->
-    <select :value="value" @input="updateValue" v-bind="$attrs">
+    <select
+      :value="value"
+      @change="updateValue"
+      v-bind="$attrs"
+      v-on="listeners"
+    >
       <option
         v-for="option in options"
         :key="option"
@@ -27,6 +32,14 @@ export default {
       default: ''
     },
     value: [String, Number]
+  },
+  computed: {
+    listeners() {
+      return {
+        ...this.$listeners,
+        input: this.updateValue
+      }
+    }
   },
   methods: {
     updateValue(event) {
