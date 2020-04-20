@@ -1,7 +1,6 @@
 <template>
   <div>
     <label v-if="label">{{ label }}</label>
-    <!-- select for object library https://vue-multiselect.js.org/ -->
     <select
       :value="value"
       @change="updateValue"
@@ -10,28 +9,23 @@
     >
       <option
         v-for="option in options"
-        :key="option"
+        :value="option"
+        :key="option.id"
         :selected="option === value"
+        >{{ option }}</option
       >
-        {{ option }}
-      </option>
     </select>
   </div>
 </template>
-
 <script>
+import { formFieldMixin } from '../mixins/formFieldMixin'
 export default {
-  inheritAttrs: false,
+  mixins: [formFieldMixin],
   props: {
     options: {
       type: Array,
       required: true
-    },
-    label: {
-      type: String,
-      default: ''
-    },
-    value: [String, Number]
+    }
   },
   computed: {
     listeners() {
@@ -40,13 +34,6 @@ export default {
         input: this.updateValue
       }
     }
-  },
-  methods: {
-    updateValue(event) {
-      this.$emit('input', event.target.value)
-    }
   }
 }
 </script>
-
-<style scoped></style>

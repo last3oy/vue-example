@@ -25,6 +25,7 @@
         :class="{ error: $v.event.title.$error }"
         @blur="$v.event.title.$touch()"
       />
+
       <template v-if="$v.event.title.$error">
         <p v-if="!$v.event.title.required" class="errorMessage">
           Title is required.
@@ -40,6 +41,7 @@
         :class="{ error: $v.event.description.$error }"
         @blur="$v.event.description.$touch()"
       />
+
       <template v-if="$v.event.description.$error">
         <p v-if="!$v.event.description.required" class="errorMessage">
           Description is required.
@@ -51,14 +53,15 @@
         label="Location"
         v-model="event.location"
         type="text"
-        placeholder="Add a location"
+        placeholder="Location"
         class="field"
         :class="{ error: $v.event.location.$error }"
         @blur="$v.event.location.$touch()"
       />
+
       <template v-if="$v.event.location.$error">
         <p v-if="!$v.event.location.required" class="errorMessage">
-          label="Location" is required.
+          Location is required.
         </p>
       </template>
 
@@ -73,6 +76,7 @@
           @opened="$v.event.date.$touch()"
         />
       </div>
+
       <template v-if="$v.event.date.$error">
         <p v-if="!$v.event.date.required" class="errorMessage">
           Date is required.
@@ -87,20 +91,19 @@
         :class="{ error: $v.event.time.$error }"
         @blur="$v.event.time.$touch()"
       />
+
       <template v-if="$v.event.time.$error">
         <p v-if="!$v.event.time.required" class="errorMessage">
           Time is required.
         </p>
       </template>
 
-      <!-- <input type="submit" class="button -fill-gradient" value="Submit" /> -->
       <BaseButton
         type="submit"
         buttonClass="-fill-gradient"
         :disabled="$v.$anyError"
+        >Submit</BaseButton
       >
-        Submit
-      </BaseButton>
       <p v-if="$v.$anyError" class="errorMessage">
         Please fill out the required field(s).
       </p>
@@ -112,7 +115,6 @@
 import Datepicker from 'vuejs-datepicker'
 import NProgress from 'nprogress'
 import { required } from 'vuelidate/lib/validators'
-
 export default {
   components: {
     Datepicker
@@ -176,9 +178,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.field {
-  margin-bottom: 24px;
-}
-</style>
