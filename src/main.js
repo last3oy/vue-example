@@ -6,10 +6,12 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import BaseIcon from '@/components/BaseIcon'
 import BaseInput from '@/components/BaseInput'
+import BaseSelect from '@/components/BaseSelect'
 import 'nprogress/nprogress.css'
 
 Vue.component('BaseIcon', BaseIcon)
 Vue.component('BaseInput', BaseInput)
+Vue.component('BaseSelect', BaseSelect)
 
 Vue.config.productionTip = false
 
