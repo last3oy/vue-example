@@ -231,6 +231,24 @@
       "date": "",
       "time": "5:00",
       "attendees": []
+    },
+    {
+      "id": 8322942,
+      "user": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "123",
+        "name": "Adam"
+      },
+      "title": "dog",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
     }
   ]
 }
