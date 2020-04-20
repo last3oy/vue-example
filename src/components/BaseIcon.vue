@@ -4,12 +4,12 @@
       <use v-bind="{ 'xlink:href': '/feather-sprite.svg#' + name }" />
     </svg>
     <slot></slot>
-    <!-- <slot name="eiei"></slot> -->
   </div>
 </template>
 
 <script>
 export default {
+  name: 'Icon',
   props: {
     name: String,
     width: {

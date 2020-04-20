@@ -4,22 +4,15 @@
     :to="{ name: 'event-show', params: { id: event.id } }"
   >
     <div class="event-card -shadow">
-      <!-- Skelaton -->
-      <!-- HTML -->
       <span class="eyebrow">@{{ event.time }} on {{ event.date }}</span>
-      <h4>{{ event.title }}</h4>
-      <BaseIcon name="users"
-        >{{ event.attendees ? event.attendees.length : 0 }} attending</BaseIcon
-      >
-      <!-- <BaseIcon name="users"><p slot="eiei"></p></BaseIcon> -->
+      <h4 class="title">{{ event.title }}</h4>
+      <BaseIcon name="users">{{ event.attendees.length }} attending</BaseIcon>
     </div>
   </router-link>
 </template>
 
 <script>
 export default {
-  // Brain
-  // JS
   props: {
     event: Object
   }
@@ -27,8 +20,6 @@ export default {
 </script>
 
 <style scoped>
-/* Dress */
-/* CSS */
 .event-card {
   padding: 20px;
   margin-bottom: 24px;
@@ -42,7 +33,6 @@ export default {
 .event-card > .title {
   margin: 0;
 }
-
 .event-link {
   color: black;
   text-decoration: none;
