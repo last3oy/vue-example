@@ -5,9 +5,11 @@ import store from './store'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import BaseIcon from '@/components/BaseIcon'
+import BaseInput from '@/components/BaseInput'
 import 'nprogress/nprogress.css'
 
 Vue.component('BaseIcon', BaseIcon)
+Vue.component('BaseInput', BaseInput)
 
 Vue.config.productionTip = false
 
