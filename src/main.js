@@ -9,6 +9,9 @@ import BaseInput from '@/components/BaseInput'
 import BaseSelect from '@/components/BaseSelect'
 import BaseButton from '@/components/BaseButton'
 import 'nprogress/nprogress.css'
+import Vuelidate from 'vuelidate'
+
+Vue.use(Vuelidate)
 
 Vue.component('BaseIcon', BaseIcon)
 Vue.component('BaseInput', BaseInput)
